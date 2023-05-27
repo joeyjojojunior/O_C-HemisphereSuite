@@ -39,6 +39,7 @@
 #include "HEM_Metronome.h"
 #include "HEM_hMIDIIn.h"
 #include "HEM_hMIDIOut.h"
+#include "HEM_RandomRatchet.h"
 // #include "HEM_MixerBal.h"
 // #include "HEM_Palimpsest.h"
 #include "HEM_RndWalk.h"
@@ -93,6 +94,7 @@
     DECLARE_APPLET( 50, 0x04, Metronome), \
     DECLARE_APPLET(150, 0x20, hMIDIIn), \
     DECLARE_APPLET( 27, 0x20, hMIDIOut), \
+    DECLARE_APPLET( 57, 0x04, RandomRatchet), \
     DECLARE_APPLET( 44, 0x01, RndWalk), \
     DECLARE_APPLET( 26, 0x08, ScaleDuet), \
     DECLARE_APPLET( 23, 0x80, Scope), \

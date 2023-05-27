@@ -1,4 +1,4 @@
 #ifndef OC_VERSION_H_
 #define OC_VERSION_H_
-#define OC_VERSION "v2.6_ad"
+#define OC_VERSION "v1.8+VOR"
 #endif
