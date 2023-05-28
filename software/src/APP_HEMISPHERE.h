@@ -87,7 +87,7 @@ public:
         clock_setup = 0;
 
         SetApplet(0, get_applet_index_by_id(8)); // ADSR
-        SetApplet(1, get_applet_index_by_id(26)); // Scale Duet
+        SetApplet(1, get_applet_index_by_id(41)); // Scale Duet
     }
 
     void Resume() {
@@ -218,12 +218,24 @@ public:
     }
 
     void ToggleClockRun() {
-        if (clock_m->IsRunning()) clock_m->Pause();
-        else if (clock_m->IsPaused()) clock_m->Start();
-        else clock_m->ToggleForwarding();
+        SERIAL_PRINTLN("ToggleClockRun()");
+        if (clock_m->IsRunning()) 
+        { 
+            SERIAL_PRINTLN("clock_m->Pause()");
+            clock_m->Pause(); 
+        }
+        else if (clock_m->IsPaused()) { 
+            SERIAL_PRINTLN("clock_m->Start()");
+            clock_m->Start();
+        }
+        else {
+            SERIAL_PRINTLN("clock_m->ToggleForwarding()");
+            clock_m->ToggleForwarding();
+        }
     }
 
     void ToggleClockSetup() {
+        SERIAL_PRINTLN("TOGGLE CLOCK SETUP");
         clock_setup = 1 - clock_setup;
     }
 

@@ -89,19 +89,27 @@ public:
     }
 
     void Start() {
+        SERIAL_PRINTLN("CLOCK Start()");
         forwarded = 0;
         running = 1;
         Unpause();
     }
 
     void Stop() {
+        SERIAL_PRINTLN("CLOCK Stop()");
         running = 0;
         Unpause();
     }
 
-    void Pause() {paused = 1;}
+    void Pause() {
+        SERIAL_PRINTLN("CLOCK Pause()");
+        paused = 1;
+    }
 
-    void Unpause() {paused = 0;}
+    void Unpause() {
+        SERIAL_PRINTLN("CLOCK Unpause()");
+        paused = 0;
+    }
 
     void ToggleForwarding() {forwarded = 1 - forwarded;}
 

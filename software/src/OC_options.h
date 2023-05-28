@@ -16,7 +16,7 @@
 /* ------------ uncomment for use with Northernlight 2OC on the left side: --------------------------  */
 //#define NORTHERNLIGHT_2OC_LEFTSIDE
 /* ------------ print debug messages to USB serial --------------------------------------------------  */
-//#define PRINT_DEBUG
+#define PRINT_DEBUG
 /* ------------ flip screen / IO mapping ------------------------------------------------------------  */
 //#define FLIP_180
 /* ------------ invert screen pixels ----------------------------------------------------------------  */

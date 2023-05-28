@@ -29,7 +29,7 @@
 #include "HemisphereApplet.h"
 #include "HSRingBufferManager.h" // Singleton Ring Buffer manager
 
-class ASR : public HemisphereApplet {
+class ASR_Hemi : public HemisphereApplet {
 public:
 
     const char* applet_name() {
@@ -154,15 +154,15 @@ private:
 ///  should prefer to handle things in the HemisphereApplet child class
 ///  above.
 ////////////////////////////////////////////////////////////////////////////////
-ASR ASR_instance[2];
+ASR_Hemi ASR_instance[2];
 
-void ASR_Start(bool hemisphere) {ASR_instance[hemisphere].BaseStart(hemisphere);}
-void ASR_Controller(bool hemisphere, bool forwarding) {ASR_instance[hemisphere].BaseController(forwarding);}
-void ASR_View(bool hemisphere) {ASR_instance[hemisphere].BaseView();}
-void ASR_OnButtonPress(bool hemisphere) {ASR_instance[hemisphere].OnButtonPress();}
-void ASR_OnEncoderMove(bool hemisphere, int direction) {ASR_instance[hemisphere].OnEncoderMove(direction);}
-void ASR_ToggleHelpScreen(bool hemisphere) {ASR_instance[hemisphere].HelpScreen();}
-uint32_t ASR_OnDataRequest(bool hemisphere) {return ASR_instance[hemisphere].OnDataRequest();}
-void ASR_OnDataReceive(bool hemisphere, uint32_t data) {ASR_instance[hemisphere].OnDataReceive(data);}
+void ASR_Hemi_Start(bool hemisphere) {ASR_instance[hemisphere].BaseStart(hemisphere);}
+void ASR_Hemi_Controller(bool hemisphere, bool forwarding) {ASR_instance[hemisphere].BaseController(forwarding);}
+void ASR_Hemi_View(bool hemisphere) {ASR_instance[hemisphere].BaseView();}
+void ASR_Hemi_OnButtonPress(bool hemisphere) {ASR_instance[hemisphere].OnButtonPress();}
+void ASR_Hemi_OnEncoderMove(bool hemisphere, int direction) {ASR_instance[hemisphere].OnEncoderMove(direction);}
+void ASR_Hemi_ToggleHelpScreen(bool hemisphere) {ASR_instance[hemisphere].HelpScreen();}
+uint32_t ASR_Hemi_OnDataRequest(bool hemisphere) {return ASR_instance[hemisphere].OnDataRequest();}
+void ASR_Hemi_OnDataReceive(bool hemisphere, uint32_t data) {ASR_instance[hemisphere].OnDataReceive(data);}
 
 #endif
